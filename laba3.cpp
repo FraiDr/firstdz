@@ -2,38 +2,39 @@
 #include <stdio.h>
 #include <conio.h>
 using namespace std;
-char alphabet[26] = { 'a','b', 'c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'};
+char alphabet[26] = { 'a','b', 'c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z' };
 
 int main()
 {
     cout << "Input size of  massuv ";
-    int N; cin >> N;
+    int size_of_massuv; cin >> size_of_massuv;
     cout << "Input massuv" << endl;
-    int i, j,inA; char* A = new char[N];
+    int inMy_array;
+    char* my_array = new char[size_of_massuv];
     printf_s("%s", "[\n");
-    for (i = 0; i < N; i++)
+    for (int i = 0; i < size_of_massuv; i++)
     {
-        
-        cin >> A[i];
-        
+
+        cin >> my_array[i];
+
     }
     printf_s("%s", "]");
-    int M;
-    M = N + 1;
-    
-    for (j = 0; j < M; j++)
+    int part_of_alphabet;
+    part_of_alphabet = size_of_massuv + 1;
+
+    for (int j = 0; j < part_of_alphabet; j++)
     {
-        inA = 0;
-        for (i = 0; i < N; i++)
-            if (alphabet[j] == A[i])
+        inMy_array = 0;
+        for (int i = 0; i < size_of_massuv; i++)
+            if (alphabet[j] == my_array[i])
             {
-                inA = 1;
+                inMy_array = 1;
                 break;
             }
-            if (inA == 0)
-            {
-                cout <<"missing letter ->" << alphabet[j] << endl;
-            }
+        if (inMy_array == 0)
+        {
+            cout << "missing letter ->" << alphabet[j] << endl;
+        }
     }
     return 0;
 }
