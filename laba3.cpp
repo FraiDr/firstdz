@@ -9,7 +9,7 @@ int main()
     cout << "Input size of  massuv ";
     int size_of_massuv; cin >> size_of_massuv;
     cout << "Input massuv" << endl;
-    int inMy_array;
+    int comparison_of_arrays;
     char* my_array = new char[size_of_massuv];
     printf_s("%s", "[\n");
     for (int i = 0; i < size_of_massuv; i++)
@@ -24,14 +24,14 @@ int main()
 
     for (int j = 0; j < part_of_alphabet; j++)
     {
-        inMy_array = 0;
+        comparison_of_arrays = 0;
         for (int i = 0; i < size_of_massuv; i++)
             if (alphabet[j] == my_array[i])
             {
-                inMy_array = 1;
+                comparison_of_arrays = 1;
                 break;
             }
-        if (inMy_array == 0)
+        if (comparison_of_arrays == 0)
         {
             cout << "missing letter ->" << alphabet[j] << endl;
         }
